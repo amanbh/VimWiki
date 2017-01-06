@@ -1,0 +1,239 @@
+<html>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../style.css" />
+    <title>2016-12-15</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+    
+<div id="December 15th"><h1 id="December 15th">December 15th</h1></div>
+
+<div id="Contents" class="toc"><h1 id="Contents">Contents</h1></div>
+<ul>
+<li>
+<a href="2016-12-15.html#December 15th">December 15th</a>
+
+<li>
+<a href="2016-12-15.html#Data science interview questions">Data science interview questions</a>
+
+<li>
+<a href="2016-12-15.html#Kaggle - Things that didnt work">Kaggle - Things that didnt work</a>
+
+<li>
+<a href="2016-12-15.html#gtypist">gtypist</a>
+
+<li>
+<a href="2016-12-15.html#Vimwiki Custom HTML Templates">Vimwiki Custom HTML Templates</a>
+
+<li>
+<a href="2016-12-15.html#Factorization Machines">Factorization Machines</a>
+
+<ul>
+<li>
+<a href="2016-12-15.html#Factorization Machines-Relation to SVM">Relation to SVM</a>
+
+<ul>
+<li>
+<a href="2016-12-15.html#Factorization Machines-Relation to SVM-Linear SVM">Linear SVM</a>
+
+<li>
+<a href="2016-12-15.html#Factorization Machines-Relation to SVM-Polynomial SVM d = 2">Polynomial SVM d = 2</a>
+
+</ul>
+</ul>
+</ul>
+
+<div id="Data science interview questions"><h1 id="Data science interview questions">Data science interview questions</h1></div>
+<ul>
+<li>
+<a href="https:&#47;&#47;www.springboard.com&#47;blog&#47;data-science-interview-questions&#47;">link</a>
+
+</ul>
+
+<div id="Kaggle - Things that didnt work"><h1 id="Kaggle - Things that didnt work">Kaggle - Things that didnt work</h1></div>
+<ul>
+<li>
+Owens LOO Encoding 
+
+<ul>
+<li>
+<a href="https:&#47;&#47;www.kaggle.com&#47;c&#47;allstate-claims-severity&#47;forums&#47;t&#47;25101&#47;owen-s-loo-encoding">link</a>
+
+</ul>
+<li>
+IDs!!
+
+<li>
+Nvidia GTX 1080 brings per-epoch time down from 25-80 secs to 1-5 secs
+
+<ul>
+<li>
+costs $600!!
+
+</ul>
+<li>
+Using lower "eta" values does not always lead to best results
+
+<li>
+Converting this regression problem to a classification problem
+
+<ul>
+<li>
+Bin Loss into classes by:
+
+<ul>
+<li>
+Equal Interval Sizes/Width
+
+<li>
+Equal Frequency/Percentiles
+
+<li>
+Mutual Information
+
+</ul>
+</ul>
+</ul>
+
+<div id="gtypist"><h1 id="gtypist">gtypist</h1></div>
+<ul>
+<li>
+Complete Lesson 1
+
+</ul>
+    
+<div id="Vimwiki Custom HTML Templates"><h1 id="Vimwiki Custom HTML Templates">Vimwiki Custom HTML Templates</h1></div>
+<p>
+<a href="http:&#47;&#47;www.rosipov.com&#47;blog&#47;custom-templates-in-vimwiki&#47;">link</a>
+</p>
+
+
+<div id="Factorization Machines"><h1 id="Factorization Machines">Factorization Machines</h1></div>
+<ul>
+<li>
+Like SVM, model interactions between features.
+
+<li>
+Paper: <a href="http:&#47;&#47;www.ismll.uni-hildesheim.de&#47;pub&#47;pdfs&#47;Rendle2010FM.pdf">http://www.ismll.uni-hildesheim.de/pub/pdfs/Rendle2010FM.pdf</a> (very simple to follow)
+
+<li>
+Model Equation for d=2 degree interactions:
+\begin{align}
+\hat{y}  (\mathbf x) = w_0 + \sum_i w_i x_i + \sum_{(i,j): i \neq j} \left&lt;\mathbf v_i, \mathbf v_j\right&gt; x_i x_j
+\end{align}
+    where model parameters are:
+
+<ul>
+<li>
+\( w_0 \in \mathbb R \)
+
+<li>
+\( w_i \in \mathbb R    \,\forall\,  i \in \left[n\right] \)
+
+<li>
+\( \mathbf v_i \in \mathbb R^k  \,\forall\,  i \in \left[n\right] \)
+
+<li>
+\( k \) is a hyper-parameter that describes the dimensionality of the factorization.
+
+</ul>
+<li>
+Supposedly FM works better than SVM for sparse problems 
+
+<li>
+Model equation for a FM can be computed in linear time \( O(kn) \).
+
+<li>
+Model parameters can be computed efficiently using gradient descent.
+
+</ul>
+    
+<div id="Factorization Machines-Relation to SVM"><h2 id="Relation to SVM" class="justcenter">Relation to SVM</h2></div>
+<ul>
+<li>
+Model equation for SVM can be expressed as dot-product between transformed input \( \mathbf x \) and model parameters \( \mathbf w \):
+\[
+\hat{y} (\mathbf x) = \left&lt; \phi(\mathbf x), \mathbf w \right&gt;
+\]
+    where \(\phi\) is mapping from feature space to more complex space. The mapping is related to the kernel with:
+\[
+K: \mathbb R^n \times \mathbb R^n \rightarrow \mathbb R, \quad K(\mathbf x, \mathbf z) = \left&lt; \phi(\mathbf x), \phi(\mathbf z ) \right&gt;
+\]
+
+</ul>
+        
+<div id="Factorization Machines-Relation to SVM-Linear SVM"><h3 id="Linear SVM" class="justcenter">Linear SVM</h3></div>
+<ul>
+<li>
+Kernel \(K(\mathbf x,\mathbf z) = 1 + \left&lt; \mathbf x, \mathbf z \right&gt;\)
+
+<li>
+Mapping \(\phi(\mathbf x) = (1, x_1, x_2, \ldots, x_n)\)
+
+<li>
+Identical to FM with \(d = 1\)
+
+</ul>
+        
+<div id="Factorization Machines-Relation to SVM-Polynomial SVM d = 2"><h3 id="Polynomial SVM d = 2" class="justcenter">Polynomial SVM d = 2</h3></div>
+<ul>
+<li>
+Kernel \( K(\mathbf x, \mathbf z) = (1 + \left&lt; \mathbf x, \mathbf z \right&gt;)^d\)
+
+<li>
+Mapping for d = 2, \( \phi(\mathbf x) = (1, \sqrt 2 x_1, \ldots, \sqrt 2 x_n, x_1^2, \ldots, x_n^2, \sqrt 2 x_1 x_2, \ldots, \sqrt 2 x_{n-1} x_n ) \)
+
+<li>
+Model equation: \( \hat{y} (\mathbf x) = \left&lt; \phi(\mathbf x), \mathbf w \right&gt; = w_0 + \sqrt 2 \sum_i w_i x_i + \sqrt 2 \sum_{(i,j): i \neq j} w_{(i,j)} x_i x_j + \sum_i w_{(i,i)} x_i^2 \)
+
+<li>
+Model parameters \(w_0, \mathbf w, W = [w_{(i, j)}]\)
+
+<li>
+The main difference between SVMs and FMs is the parametrization: all interaction parameters \(w_{(i,j)}\) of SVMs are completely independent, e.g. \(w_{(i,j)}\) and \(w_{(i,l)}\).
+
+<li>
+In contrast to this the interaction parameters of FMs are factorized and thus \(\left&lt; \mathbf v_i, \mathbf v_j \right&gt;\) and \(\left&lt; \mathbf v_i, \mathbf v_l \right&gt;\) depend on each other as they share parameter \(\mathbf v_i\)
+
+</ul>
+
+<ul>
+<li>
+The dense parametrization of SVMs requires direct observations for the interactions which is often not given in sparse settings.
+
+<li>
+Collaborative Filtering example:
+
+<ul>
+<li>
+\(x_1\) denotes User Alice and \(x_{10}\) denotes Movie Titanic,
+
+<li>
+Then estimating model parameter \(w_{(1,10)}\) needs observations of rating of Titanic by Alice,
+
+<li>
+(x_1 or x_10 are 0 for other observations),
+
+<li>
+But if it is available in training data, it not in test data.
+
+<li>
+<em>Thus the polynomial SVM can make no use of any 2-way interaction for predicting test examples.</em>
+
+</ul>
+</ul>
+
+<ul>
+<li>
+The model equation of FMs is independent of the training data. Prediction with SVMs depends on parts of the training data (the support vectors).
+
+</ul>
+
+    </div>
+</body>
+</html>

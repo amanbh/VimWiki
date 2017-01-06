@@ -1,0 +1,8 @@
+= My Knowledge Base =
+
+[[diary/diary|Diary]]
+
+    * [[Tasks]] -- things to do!
+    * [[Scratchpad]] -- temporary stuff
+    * [[Books|Books to Read]]
+

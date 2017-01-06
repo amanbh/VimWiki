@@ -1,0 +1,36 @@
+= December 19th =
+
+= Contents =
+    - [[#December 19th|December 19th]]
+        - [[#December 19th#big directory troubles|big directory troubles]]
+        - [[#December 19th#python view 16-bit images|python view 16-bit images]]
+        - [[#December 19th#remove Byte Order Mark from file with UTF-8 encoding|remove Byte Order Mark from file with UTF-8 encoding]]
+        - [[#December 19th#Docker basics|Docker basics]]
+
+
+== big directory troubles ==
+    - To delete files when disk is full
+        - `echo > any_existing_nonempty_file`
+        - After this you can delete files.
+    - To view files:
+        - `/bin/ls -f -1` to avoid coloring/sorting and `lstats` calls
+        - custom code that uses `getdents()`
+
+
+== python view 16-bit images ==
+    - Have Not Solved!
+    
+    
+== remove Byte Order Mark from file with UTF-8 encoding ==
+    - do `:set nobomb` and save in vim 
+      
+      
+== Docker basics ==
+    - [[Docker]]
+    - Start docker daemon `sudo service docker start`
+    - Test hello-world `sudo docker run hello-world`
+    - Create Dockerfile ([[https://docs.docker.com/engine/getstarted/step_four/|example]] // I got mine from `git clone https://github.com/amanbh/docker-python` )
+    - Edit *Dockerfile*
+    - Build docker image locally `docker build -t tagname .`  
+    - Verify it is build `sudo docker images`
+    - Run the new image `sudo docker run tagname`

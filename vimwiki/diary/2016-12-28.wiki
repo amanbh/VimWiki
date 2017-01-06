@@ -1,0 +1,37 @@
+= DL book =
+    - Available [[http://www.deeplearningbook.org/|online]] 
+    - Good for reviewing basic mathematics, gives intution:
+    - Linear Algebra [[http://www.deeplearningbook.org/contents/linear_algebra.html|link]]
+        - Linear Dependence
+        - Norms
+        - _Eigendecomposition_
+        - _SVD_
+        - _Moore-Penrose Pseuodoinverse_
+        - Trace
+        - Determinant
+        - _PCA derivation_
+    - Prob and Info Theory [[http://www.deeplearningbook.org/contents/prob.html|link]]
+        - Frequentist versus Bayesian
+        - Random Variables
+        - PMF, PDF
+        - Marginal, conditional probabilities
+        - Chain Rule
+        - Independence, Conditional Independence
+        - Expectation, Variance, Covariance
+        - Bernoulli, Multinomial
+        - Gaussian, Multivariate normal
+        - Exponential, Laplace
+        - Dirac delta
+        - Mixture of distributions, Latent Variable
+        - Prior & Posterior Probability
+        - Logistic Sigmoid, _Softplus_
+        - Bayes' Rule
+        - PDF after change of variable
+        - Self-information
+        - Entropy
+        - _KL Divergence_
+        - Cross-entropy
+        - _Structured Probabilitic Models_ (Undirected and Directed)
+    - Numerical Computations & Optimization [[http://www.deeplearningbook.org/contents/numerical.html|link]]
+        - **TODO**
+
