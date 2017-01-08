@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#december-19th">December 19th</a><ul>
+<li><a href="#big-directory-troubles">big directory troubles</a></li>
+<li><a href="#python-view-16-bit-images">python view 16-bit images</a></li>
+<li><a href="#remove-byte-order-mark-from-file-with-utf-8-encoding">remove Byte Order Mark from file with UTF-8 encoding</a></li>
+<li><a href="#docker-basics">Docker basics</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="december-19th">December 19th</h1>
+<h2 id="big-directory-troubles">big directory troubles</h2>
+<ul>
+<li>To delete files when disk is full
+<ul>
+<li><code>echo &gt; any_existing_nonempty_file</code></li>
+<li>After this you can delete files.</li>
+</ul></li>
+<li>To view files:
+<ul>
+<li><code>/bin/ls -f -1</code> to avoid coloring/sorting and <code>lstats</code> calls</li>
+<li>custom code that uses <code>getdents()</code></li>
+</ul></li>
+</ul>
+<h2 id="python-view-16-bit-images">python view 16-bit images</h2>
+<ul>
+<li>Have Not Solved!</li>
+</ul>
+<h2 id="remove-byte-order-mark-from-file-with-utf-8-encoding">remove Byte Order Mark from file with UTF-8 encoding</h2>
+<ul>
+<li>do <code>:set nobomb</code> and save in vim</li>
+</ul>
+<h2 id="docker-basics">Docker basics</h2>
+<ul>
+<li><a href="Docker.html">Docker</a></li>
+<li>Start docker daemon <code>sudo service docker start</code></li>
+<li>Test hello-world <code>sudo docker run hello-world</code></li>
+<li>Create Dockerfile (<a href="https://docs.docker.com/engine/getstarted/step_four/">example</a> // I got mine from <code>git clone https://github.com/amanbh/docker-python</code> )</li>
+<li>Edit <em>Dockerfile</em></li>
+<li>Build docker image locally <code>docker build -t tagname .</code><br />
+</li>
+<li>Verify it is build <code>sudo docker images</code></li>
+<li>Run the new image <code>sudo docker run tagname</code></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#december-16th">December 16th</a><ul>
+<li><a href="#bash-sleep-random">Bash sleep random</a></li>
+<li><a href="#workaround-for-qt_xkb_config_root">Workaround for QT_XKB_CONFIG_ROOT</a></li>
+<li><a href="#solar-becomes-cheaper-than-wind">Solar becomes cheaper than wind</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="december-16th">December 16th</h1>
+<h2 id="bash-sleep-random">Bash sleep random</h2>
+<ul>
+<li><a href="http://blog.buberel.org/2010/07/howto-random-sleep-duration-in-bash.html">Link</a></li>
+<li>Used for <code>PARALLEL_SSH</code></li>
+<li>Alternative : use --sshdelay flag with parallel</li>
+</ul>
+<pre class="sh"><code>sleep $[ ( $RANDOM % 10 ) + 1 ]s</code></pre>
+<h2 id="workaround-for-qt_xkb_config_root">Workaround for QT_XKB_CONFIG_ROOT</h2>
+<ul>
+<li>Needed for <em>shapely</em> package for Kaggle DSTL contest</li>
+<li>shapely installed from conda</li>
+<li>Workaround: <code>export QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb</code></li>
+<li>From <a href="https://lists.debian.org/debian-backports/2014/10/msg00061.html">here</a></li>
+</ul>
+<h2 id="solar-becomes-cheaper-than-wind">Solar becomes cheaper than wind</h2>
+<ul>
+<li>Average cost for new solar plants is cheaper than wind and coal w/o subsidy.</li>
+<li>Existing coal plants cheaper to operate than constructing new solar plants</li>
+<li>Developing countries (China, India, South Africa) to focus on solar.</li>
+</ul>
+</body>
+</html>

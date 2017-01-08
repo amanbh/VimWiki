@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#december-15th">December 15th</a><ul>
+<li><a href="#a-data-science-interview-questions">A Data science interview questions</a></li>
+<li><a href="#kaggle---things-that-didnt-work">Kaggle - Things that didnt work</a></li>
+<li><a href="#gtypist">gtypist</a></li>
+<li><a href="#vimwiki-custom-html-templates">Vimwiki Custom HTML Templates</a></li>
+<li><a href="#factorization-machines">Factorization Machines</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="december-15th">December 15th</h1>
+<h2 id="a-data-science-interview-questions">A Data science interview questions</h2>
+<ul>
+<li><a href="https://www.springboard.com/blog/data-science-interview-questions/">Link</a></li>
+</ul>
+<h2 id="kaggle---things-that-didnt-work">Kaggle - Things that didnt work</h2>
+<ul>
+<li>Owens LOO Encoding
+<ul>
+<li><a href="https://www.kaggle.com/c/allstate-claims-severity/forums/t/25101/owen-s-loo-encoding">Link</a></li>
+</ul></li>
+<li>IDs!!</li>
+<li>Nvidia GTX 1080 brings per-epoch time down from 25-80 secs to 1-5 secs
+<ul>
+<li>costs $600!!</li>
+</ul></li>
+<li>Using lower &quot;eta&quot; values does not always lead to best results</li>
+<li>Converting this regression problem to a classification problem
+<ul>
+<li>Bin Loss into classes by:
+<ul>
+<li>Equal Interval Sizes/Width</li>
+<li>Equal Frequency/Percentiles</li>
+<li>Mutual Information</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="gtypist">gtypist</h2>
+<ul>
+<li>Complete Lesson 1</li>
+</ul>
+<h2 id="vimwiki-custom-html-templates">Vimwiki Custom HTML Templates</h2>
+<p><a href="http://www.rosipov.com/blog/custom-templates-in-vimwiki/">Link</a></p>
+<h2 id="factorization-machines">Factorization Machines</h2>
+<ul>
+<li>Like SVM, model interactions between features.</li>
+<li><a href="http://www.ismll.uni-hildesheim.de/pub/pdfs/Rendle2010FM.pdf">Paper</a> (very simple to follow)</li>
+<li><p>Model Equation for d=2 degree interactions:</p>
+<p>$  (x) = w_0 + <em>i w_i x_i + </em>{(i,j): i j} &lt;v_i, v_j&gt; x_i x_j $</p>
+where model parameters are:
+<ul>
+<li>$ w_0 R $</li>
+<li>$ w_i R ,, i $</li>
+<li>$ v_i R^k ,, i $</li>
+<li>$ k $ is a hyper-parameter that describes the dimensionality of the factorization.</li>
+</ul></li>
+<li>Supposedly FM works better than SVM for sparse problems</li>
+<li>Model equation for a FM can be computed in linear time $ O(kn) $.</li>
+<li><p>Model parameters can be computed efficiently using gradient descent.</p>
+<h3 id="relation-to-svm">Relation to SVM</h3></li>
+<li><p>Model equation for SVM can be expressed as dot-product between transformed input $ x $ and model parameters $ w $:</p>
+<p>$  (x) = &lt; (x), w &gt; $</p>
+<p>where <span class="math inline"><em>ϕ</em></span> is mapping from feature space to more complex space. The mapping is related to the kernel with:</p>
+<p>$ K: R^n R^n R, K(x, z) = &lt; (x), (z ) &gt; $</p>
+<pre><code>#### Linear SVM</code></pre>
+<ul>
+<li>Kernel <span class="math inline">$K(\mathbf x,\mathbf z) = 1 + \left&lt; \mathbf x, \mathbf z \right&gt;$</span></li>
+<li>Mapping <span class="math inline">$\phi(\mathbf x) = (1, x_1, x_2, \ldots, x_n)$</span></li>
+<li><p>Identical to FM with <span class="math inline"><em>d</em> = 1</span></p>
+<h4 id="polynomial-svm-d-2">Polynomial SVM d = 2</h4></li>
+<li>Kernel $ K(x, z) = (1 + &lt; x, z &gt;)^d$</li>
+<li>Mapping for d = 2, $ (x) = (1, 2 x_1, , 2 x_n, x_1^2, , x_n^2, 2 x_1 x_2, , 2 x_{n-1} x_n ) $</li>
+<li>Model equation: $  (x) = &lt; (x), w &gt; = w_0 + 2 <em>i w_i x_i + 2 </em>{(i,j): i j} w_{(i,j)} x_i x_j + <em>i w</em>{(i,i)} x_i^2 $</li>
+<li>Model parameters <span class="math inline">$w_0, \mathbf w, W = [w_{(i, j)}]$</span></li>
+<li>The main difference between SVMs and FMs is the parametrization: all interaction parameters <span class="math inline"><em>w</em><sub>(<em>i</em>, <em>j</em>)</sub></span> of SVMs are completely independent, e.g. <span class="math inline"><em>w</em><sub>(<em>i</em>, <em>j</em>)</sub></span> and <span class="math inline"><em>w</em><sub>(<em>i</em>, <em>l</em>)</sub></span>.</li>
+<li><p>In contrast to this the interaction parameters of FMs are factorized and thus <span class="math inline">$\left&lt; \mathbf v_i, \mathbf v_j \right&gt;$</span> and <span class="math inline">$\left&lt; \mathbf v_i, \mathbf v_l \right&gt;$</span> depend on each other as they share parameter <span class="math inline">$\mathbf v_i$</span></p></li>
+</ul></li>
+<li>The dense parametrization of SVMs requires direct observations for the interactions which is often not given in sparse settings.</li>
+<li>Collaborative Filtering example:
+<ul>
+<li><span class="math inline"><em>x</em><sub>1</sub></span> denotes User Alice and <span class="math inline"><em>x</em><sub>10</sub></span> denotes Movie Titanic,</li>
+<li>Then estimating model parameter <span class="math inline"><em>w</em><sub>(1, 10)</sub></span> needs observations of rating of Titanic by Alice,</li>
+<li>(x_1 or x_10 are 0 for other observations),</li>
+<li>But if it is available in training data, it not in test data.</li>
+<li><em>Thus the polynomial SVM can make no use of any 2-way interaction for predicting test examples.</em></li>
+</ul></li>
+<li><p>The model equation of FMs is independent of the training data. Prediction with SVMs depends on parts of the training data (the support vectors).</p></li>
+</ul>
+</body>
+</html>

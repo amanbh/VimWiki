@@ -1,9 +1,9 @@
 
-= Diary =
+# Diary
 
-== 2016 ==
+## 2016
 
-=== December ===
+### December
     * [[2016-12-30|December 30th]]
     * [[2016-12-28|DL book]]
     * [[2016-12-22|Image Clustering]]

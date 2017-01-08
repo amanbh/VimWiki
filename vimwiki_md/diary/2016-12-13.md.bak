@@ -1,0 +1,30 @@
+= December 13th =
+
+= Contents =
+    - [[#Vim-Wiki|Vim-Wiki]]
+    - [[#DidYouMean|DidYouMean]]
+    - [[#XY problem|XY problem]]
+    - [[#Your problem with Vim is that you don't grok vi|Your problem with Vim is that you don't grok vi]]
+    - [[#Dark side of technical interview|Dark side of technical interview]]
+
+= Vim-Wiki = 
+    - Set up *vimwiki* on glowblue
+
+= DidYouMean =
+    - *DidYouMean* vim plugin
+    - Vim plugin which asks for the right file to open
+    - [[https://github.com/EinfachToll/DidYouMean|Link]]
+
+= XY problem =
+    - *XY problem* asking about your attempted solution _Y_ rather than your actual problem _X_.
+    - [[http://meta.stackexchange.com/questions/66377/what-is-the-xy-problem|XY problem]]
+
+= Your problem with Vim is that you don't grok vi =
+    - In-depth explanation fo the power of Vi and its origins
+    - [[http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118|Link]]
+
+= Dark side of technical interview =
+    - [[http://www.rosipov.com/blog/the-pragmatic-programmer/|link]]
+    - Screening by recruiters
+    - Interview by another engineer
+    - Homework assignment
