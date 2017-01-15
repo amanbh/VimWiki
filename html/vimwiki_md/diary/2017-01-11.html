@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#january-11th">January 11th</a><ul>
+<li><a href="#tidy-data">Tidy Data</a></li>
+<li><a href="#pandas-categorical-ordering">Pandas Categorical Ordering</a></li>
+<li><a href="#jupyter-notebook-themes">Jupyter Notebook Themes</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="january-11th">January 11th</h1>
+<h2 id="tidy-data">Tidy Data</h2>
+<ul>
+<li><a href="http://vita.had.co.nz/papers/tidy-data.pdf">Hadley's excellent writeup</a></li>
+<li>Tidy is a format where:
+<ul>
+<li>the rows correspond to samples</li>
+<li>the columns correspond the observed variables.</li>
+</ul></li>
+<li>Most common problems with messy data:
+<ul>
+<li>Column headers are values, not variable names.
+<ul>
+<li>Fix with <code>melt</code></li>
+</ul></li>
+<li>Multiple variables stored in one column.
+<ul>
+<li>Fix by splitting column into multiple columns.</li>
+</ul></li>
+<li>Variables stored in both rows and columns.</li>
+<li>Multiple types of observational units are stored in the same table.</li>
+<li>A single observational unit is stored in multiple tables.</li>
+</ul></li>
+</ul>
+<h2 id="pandas-categorical-ordering">Pandas Categorical Ordering</h2>
+<ul>
+<li><p>Turn pandas Series into pandas categorical type with custom ordering:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Categorize columns of df</span>
+<span class="kw">def</span> col_as_category(df, col, sorter<span class="op">=</span><span class="va">None</span>):
+tmp <span class="op">=</span> df[col].astype(<span class="st">&#39;category&#39;</span>)
+<span class="cf">if</span> sorter <span class="op">is</span> <span class="op">not</span> <span class="va">None</span>:
+    tmp.cat.set_categories(new_categories<span class="op">=</span>sorter, ordered<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)
+<span class="cf">return</span> tmp </code></pre></div></li>
+<li><p>I looked for this to convert allstate's cat columns into different ordering.</p></li>
+</ul>
+<h2 id="jupyter-notebook-themes">Jupyter Notebook Themes</h2>
+<ul>
+<li>Dark theme:
+<ul>
+<li>https://github.com/powerpak/jupyter-dark-theme</li>
+</ul></li>
+<li>Installing:
+<ul>
+<li>http://sherifsoliman.com/2016/01/11/theming-ipython-jupyter-notebook/</li>
+</ul></li>
+</ul>
+</body>
+</html>

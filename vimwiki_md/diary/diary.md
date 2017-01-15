@@ -1,6 +1,14 @@
 
 # Diary
 
+## 2017
+
+### January
+    * [[2017-01-15|January 15th]]
+    * [[2017-01-12|January 12th]]
+    * [[2017-01-11|January 11th]]
+    * [[2017-01-09|January 9th]]
+
 ## 2016
 
 ### December
