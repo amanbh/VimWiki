@@ -1,15 +1,8 @@
-# Personal vimwiki
+# Personal wiki for amanbh
 
-## Heading2
+[Main Wiki](vimwiki_md/index)
+- Latest markdown style wiki in ./vimwiki_md/
+- Old vimwiki style wiki in ./vimwiki/
 
-### Heading3
-
-----
-
-* tmp
-* tmp
-
-[vimwiki](vimwiki_html/index.html)
-
-
+See [vimwiki](https://github.com/vimwiki/vimwiki)
 
