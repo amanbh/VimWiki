@@ -5,9 +5,11 @@
 - [ ] _Update Driving License_
 - [ ] _Greyhound claim_
 
-## Career related
 - [ ] Interview Prep
     - [ ] R
+        - [ ] data.table
+        - [ ] tidyverse
+        - [ ] ggplot2
     - [ ] Python
 - [.] Statistics
     - [ ] Least Squares
