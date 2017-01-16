@@ -1,6 +1,6 @@
 # Personal wiki for amanbh
 
-[Main Wiki](vimwiki_md/index)
+[Main Wiki](vimwiki_md/)
 - Latest markdown style wiki in ./vimwiki_md/
 - Old vimwiki style wiki in ./vimwiki/
 
