@@ -4,6 +4,7 @@
 ## 2017
 
 ### January
+    * [[2017-01-27|Vowpal Wabbit]]
     * [[2017-01-16|Disable F1 in XFCE Terminal]]
     * [[2017-01-15|January 15th]]
     * [[2017-01-12|January 12th]]
