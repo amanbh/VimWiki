@@ -3,7 +3,12 @@
 
 ## 2017
 
+### February
+    * [[2017-02-27|License]]
+    * [[2017-02-23|Makefile automatic dependency generation]]
+
 ### January
+    * [[2017-01-31|C++ argument parsing libraries]]
     * [[2017-01-27|Vowpal Wabbit]]
     * [[2017-01-16|Disable F1 in XFCE Terminal]]
     * [[2017-01-15|January 15th]]
