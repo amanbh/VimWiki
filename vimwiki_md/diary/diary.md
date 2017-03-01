@@ -4,7 +4,7 @@
 ## 2017
 
 ### February
-    * [[2017-02-27|License]]
+    * [[2017-02-27|Open Source Licenses]]
     * [[2017-02-23|Makefile automatic dependency generation]]
 
 ### January
