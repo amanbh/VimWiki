@@ -3,6 +3,15 @@
 
 ## 2017
 
+### October
+    * [[2017-10-06|PCA explained for the whole family]]
+
+### August
+    * [[2017-08-25|Temporary files in RAM]]
+
+### March
+    * [[2017-03-01|syncthing]]
+
 ### February
     * [[2017-02-27|Open Source Licenses]]
     * [[2017-02-23|Makefile automatic dependency generation]]
@@ -14,7 +23,7 @@
     * [[2017-01-15|January 15th]]
     * [[2017-01-12|January 12th]]
     * [[2017-01-11|January 11th]]
-    * [[2017-01-09|January 9th]]
+    * [[2017-01-09|Kaggle Allstate Claims Severity]]
 
 ## 2016
 
