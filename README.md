@@ -1,8 +1,10 @@
 # Personal wiki for amanbh
 
-[Main Wiki](vimwiki_md/)
-- Latest markdown style wiki in ./vimwiki_md/
-- Old vimwiki style wiki in ./vimwiki/
+[Main Wiki](markdown/)
+- Latest markdown style wiki in `./markdown/`
+- HTML files are generated on save, and using `:Vimwiki2HTML` in the `./generated_html` directory
+- Custom script for wiki2html.
+- ~~Old vimwiki style wiki in ./vimwiki/~~ See old git commits for old vimwiki style wiki.
 
-See [vimwiki](https://github.com/vimwiki/vimwiki)
+[Vimwiki on Github](https://github.com/vimwiki/vimwiki)
 
